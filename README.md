@@ -27,11 +27,10 @@ $ make code3
 ```
 
 #### Tips
-1. You can compile code without error message on screen by put __n__ in the last name of the file name when using __make__ command.
+You can compile code without error message on screen by put __n__ in the last name of the file name when using __make__ command. For example...
 ```
 $ make coden
 ```
-or
 ```
 $ make code1n
 ```
