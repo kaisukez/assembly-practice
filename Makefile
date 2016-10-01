@@ -1,8 +1,8 @@
 NASM = nasm -f elf
 LD = ld -m elf_i386 -s
-FILES = code code1 code2 code3
-ALLFILES = code.o code code1.o code1 code2.o code2 code3.o code3
-ALLCOMMAND = $(ALLFILES) coden code1n code2n code3n
+FILES = code code1 code2 code3 code4
+ALLFILES = code.o code code1.o code1 code2.o code2 code3.o code3 code4.o code4
+ALLCOMMAND = $(ALLFILES) coden code1n code2n code3n code4n
 ERROR = 2> ERROR.txt
 RMERR = rm -f ERROR.txt
 
