@@ -27,12 +27,14 @@ $ make code3
 ```
 
 #### Tips
-You can compile code without error message on screen by put __n__ in the last name of the file name when using __make__ command. For example...
+1. You can use __make -s__ to run make in silence mode.
+2. You can compile code without error message on screen by put __n__ in the last name of the file name when using __make__ command. For example...
 ```
 $ make coden
 ```
+also you can use with this silence mode.
 ```
-$ make code1n
+$ make -s code1n
 ```
 
 ## How to run compiled file
