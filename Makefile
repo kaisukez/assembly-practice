@@ -15,55 +15,51 @@ code.o: code.asm
 code: code.asm
 	$(NASM) code.asm
 	$(LD) -o code code.o
-	rm code.o
+	rm -f code.o
 coden: code.asm
 	$(NASM) code.asm $(ERROR)
 	$(LD) -o code code.o $(ERROR)
 	rm -f code.o & $(RMERR)
-
 
 code1.o: code1.asm
 	$(NASM) code1.asm
 code1: code1.asm
 	$(NASM) code1.asm
 	$(LD) -o code1 code1.o
-	rm code1.o
+	rm -f code1.o
 code1n: code1.asm
 	$(NASM) code1.asm $(ERROR)
 	$(LD) -o code1 code1.o $(ERROR)
 	rm -f code1.o & $(RMERR)
-
 
 code2.o: code2.asm
 	$(NASM) code2.asm
 code2: code2.asm
 	$(NASM) code2.asm
 	$(LD) -o code2 code2.o
-	rm code2.o
+	rm -f  code2.o
 code2n: code2.asm
 	$(NASM) code2.asm $(ERROR)
 	$(LD) -o code2 code2.o $(ERROR)
 	rm -f code2.o & $(RMERR)
-
 
 code3.o: code3.asm
 	$(NASM) code3.asm
 code3: code3.asm
 	$(NASM) code3.asm
 	$(LD) -o code3 code3.o
-	rm code3.o
+	rm -f code3.o
 code3n: code3.asm
 	$(NASM) code3.asm $(ERROR)
 	$(LD) -o code3 code3.o $(ERROR)
 	rm -f code3.o & $(RMERR)
-
 
 code4.o: code4.asm
 	$(NASM) code4.asm
 code4: code4.asm
 	$(NASM) code4.asm
 	$(LD) -o code4 code4.o
-	rm code4.o
+	rm -f code4.o
 code4n: code4.asm
 	$(NASM) code4.asm $(ERROR)
 	$(LD) -o code4 code4.o $(ERROR)
