@@ -11,7 +11,7 @@ $ ld -o myAsmFile myAsmFile.o
 $ rm myAsmFile.o
 ```
 
-Or something like that. But now you can use _makefile_ to make it easy by using just __make__ or __make g__ command (they are the same).
+or something like that. But now you can use _makefile_ to make it easy by using just __make__ or __make g__ command (they are the same).
 ```
 $ make f=myAsmFile
 $ make g f=myAsmFile
