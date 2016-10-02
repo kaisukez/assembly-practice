@@ -4,7 +4,7 @@ ERROR = 2> ERROR.txt
 RMERR = rm -f ERROR.txt
 LINE = echo ""
 
-.PHONY: start n clean
+.PHONY: g n s go og o no on so os
 
 # General Mode
 g: $f.asm
