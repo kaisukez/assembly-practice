@@ -3,30 +3,53 @@
 This is space that I practice assembly code and store related files.
 
 ## How to compile _.asm_ file
-I can use this way to compile _foo.asm_ file.
+
+Normally, when you want to compile __myAsmFile.asm__ file, you will use these command...
 ```
-$ cp foo.asm code.asm
-$ make code
-```
-I can store 5 different _code_ file {__code__, __code1__, __code2__, __code3__, __code4__} so you can use this command.
-```
-$ cp foo.asm code4.asm
-$ make code4
+$ nasm -f elf myAsmFile.asm
+$ ld -o myAsmFile myAsmFile.o
+$ rm myAsmFile.o
 ```
 
-#### Tips
-1. You can use __make -s__ to run make in silence mode.
-2. You can compile code without error message on screen by putting __n__ in the last of the file name when using __make__ command. For example...
+Or something like that. But now you can use _makefile_ to make it easy by using just __make__ or __make g__ command (they are the same).
 ```
-$ make coden
+$ make f=myAsmFile
+$ make g f=myAsmFile
 ```
-also you can use with this silence mode.
+
+If you don't want to see error message when compile, you can use this command...
 ```
-$ make -s code1n
+$ make n f=myAsmFile
+```
+
+And if you want to see error message from __ln__ command (in __make__ command I cut out that error message).
+```
+$ make s f=myAsmFile
+```
+
+If you want to keep object file you can use...
+```
+$ make o f=myAsmFile
+```
+
+Also you can keep object file with no-error message or full-error message when use __make__ command...
+```
+$ make so f=myAsmFile
+$ make no f=myAsmFile
+```
+
+And Also you can swap the letter
+```
+$ make os f=myAsmFile
+$ make on f=myAsmFile
 ```
 
 ## How to run compiled file
-You can run by __./__ and following by your compiled file name like...
+You can run the program by...
 ```
-$ ./code
+./myAsmFile
 ```
+Very easy.
+
+## What is next?
+You can adjust this __Makefile__ to be what you want. Not only assembly code that use long command when you want to compile it, but also another code that using tons of option when compile, you can adapt it to make it easy to use like I do.
