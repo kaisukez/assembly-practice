@@ -17,12 +17,12 @@ $ make f=myAsmFile
 $ make g f=myAsmFile
 ```
 
-If you don't want to see error message when compile, you can use this command...
+If you don't want to see error message when compiling, you can use this command...
 ```
 $ make n f=myAsmFile
 ```
 
-And if you want to see error message from __ln__ command (in __make__ command I cut out that error message).
+And if you want to see error message from __ln__ command (in __make__ command I cut out that error message). You can use this...
 ```
 $ make s f=myAsmFile
 ```
@@ -38,7 +38,7 @@ $ make so f=myAsmFile
 $ make no f=myAsmFile
 ```
 
-And Also you can swap the letter
+And Also you can swap the letter.
 ```
 $ make os f=myAsmFile
 $ make on f=myAsmFile
@@ -52,4 +52,4 @@ You can run the program by...
 Very easy.
 
 ## What is next?
-You can adjust this __Makefile__ to be what you want. Not only assembly code that use long command when you want to compile it, but also another code that using tons of option when compile, you can adapt it to make it easy to use like I do.
+You can adjust this __Makefile__ to be what you want. Not only assembly code that use long command when you want to compile it, but also another code that using tons of option, you can adapt it to make it easy like I do.
