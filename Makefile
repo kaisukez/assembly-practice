@@ -1,5 +1,5 @@
-NASM = nasm -f elf
-LD = ld -m elf_i386 -s
+NASM = nasm -f elf64
+LD = ld
 ERROR = 2> ERROR.txt
 RMERR = rm -f ERROR.txt
 LINE = echo ""
