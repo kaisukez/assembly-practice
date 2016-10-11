@@ -4,18 +4,16 @@ ERROR = 2> ERROR.txt
 RMERR = rm -f ERROR.txt
 LINE = echo ""
 
-.PHONY: g n s go og o no on so os
+.PHONY: g s o go og so os
+
+#%: %.asm
+#	@$(NASM) $<
+#	@$(LD) -o $* $*.o $(ERROR)
+#	@rm -f $*.o ERROR.txt
 
 # General Mode
 g: $f.asm
 	@$(NASM) $f.asm
-	@$(LD) -o $f $f.o $(ERROR)
-	@rm -f $f.o & $(RMERR)
-
-
-# No-Error Mode
-n: $f.asm
-	@$(NASM) $f.asm $(ERROR)
 	@$(LD) -o $f $f.o $(ERROR)
 	@rm -f $f.o & $(RMERR)
 
@@ -27,6 +25,10 @@ s: $f.asm
 	@rm -f $f.o
 
 # General Mode (keep object file)
+o: $f.asm
+	@$(NASM) $f.asm
+	@$(LD) -o $f $f.o $(ERROR)
+	@rm -f $f.o & $(RMERR)
 go: $f.asm
 	@$(NASM) $f.asm
 	@$(LD) -o $f $f.o $(ERROR)
@@ -35,20 +37,6 @@ og: $f.asm
 	@$(NASM) $f.asm
 	@$(LD) -o $f $f.o $(ERROR)
 	@rm -f $f.o & $(RMERR)
-o: $f.asm
-	@$(NASM) $f.asm
-	@$(LD) -o $f $f.o $(ERROR)
-	@rm -f $f.o & $(RMERR)
-
-# No-Error Mode (keep object file) 
-no: $f.asm
-	@$(NASM) $f.asm $(ERROR)
-	@$(LD) -o $f $f.o $(ERROR)
-	@$(RMERR)
-on: $f.asm
-	@$(NASM) $f.asm $(ERROR)
-	@$(LD) -o $f $f.o $(ERROR)
-	@$(RMERR)
 
 # Standard Mode (keep object file)
 so: $f.asm
