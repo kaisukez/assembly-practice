@@ -2,54 +2,23 @@
 
 This is space that I practice assembly code and store related files.
 
-## How to compile _.asm_ file
+## How to compile __.asm__ file
 
 Normally, when you want to compile __myAsmFile.asm__ file, you will use these command...
 ```
-$ nasm -f elf myAsmFile.asm
-$ ld -o myAsmFile myAsmFile.o
-$ rm myAsmFile.o
+$ nasm -f elf64 myCode.asm
+$ ld -o myAsmFile myCode.o
+$ rm myCode.o
 ```
 
-or something like that. But now you can use _makefile_ to make it easy by using just __make__ or __make g__ command (they are the same).
+to make it easy you can use __Makefile__ to compile code instead of typing above command like this...
 ```
-$ make f=myAsmFile
-$ make g f=myAsmFile
-```
-
-If you don't want to see error message when compiling, you can use this command...
-```
-$ make n f=myAsmFile
+$ make f=myCode
 ```
 
-And if you want to see error message from __ln__ command (in __make__ command I cut out that error message). You can use this...
-```
-$ make s f=myAsmFile
-```
+## How to run code
 
-If you want to keep object file you can use...
+After you have compiled __.asm__ file, you can run code by typing...
 ```
-$ make o f=myAsmFile
+$ ./myCode
 ```
-
-Also you can keep object file with no-error message or full-error message when use __make__ command...
-```
-$ make so f=myAsmFile
-$ make no f=myAsmFile
-```
-
-And Also you can swap the letter.
-```
-$ make os f=myAsmFile
-$ make on f=myAsmFile
-```
-
-## How to run compiled file
-You can run the program by...
-```
-./myAsmFile
-```
-Very easy.
-
-## What is next?
-You can adjust this __Makefile__ to be what you want. Not only assembly code that use long command when you want to compile it, but also another code that using tons of option, you can adapt it to make it easy like I do.
