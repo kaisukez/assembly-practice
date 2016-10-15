@@ -11,9 +11,9 @@ section .data
 	newline db 10
 
 section .bss
-	num1 resb 2
-	num2 resb 2
-	res resb 2
+	num1 resb 1
+	num2 resb 1
+	res resb 1
 
 section .text
 	global _start
